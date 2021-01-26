@@ -1,0 +1,27 @@
+.header{
+    box-sizing: border-box;
+    background-color: teal;
+    display: flex;
+    justify-content: space-between;
+    height:75px;
+}
+h2{
+    margin:25px 50px 25px 75px;
+    color:rgb(243, 228, 200);
+}
+ul{
+    list-style: none;
+    display: flex;
+    width: 500px;
+    margin: 29px 70px 29px 60px;
+    justify-content: space-around;
+    font-weight: bolder;
+    text-align: center;  
+}
+.header ul li{
+    justify-content: space-around;
+}
+.header ul li a{
+    text-decoration: none;
+    color: rgb(243, 228, 200);
+}

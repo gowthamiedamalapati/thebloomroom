@@ -1,0 +1,34 @@
+.footer{
+    background-color: teal;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    bottom:0px;
+
+}
+.quick-shop{
+    float: left;
+    width: 50%; /* to set quickshop and contact next to each other with equal space on the footer width wise to add one third div(item put width as 25% for one div, 50% on the other and 25% on other */
+    margin: 25px 25px 0px;
+    margin-left: 40px;
+}
+.quick-shop ul{
+    list-style: none;
+    padding: 10px;
+}
+.quick-shop ul li {
+    text-decoration: none;
+}
+.quick-shop ul li a{
+    text-decoration: none;
+    color: wheat;
+}
+.contact-us{
+    float: right;
+    width: 50%; /* to set quickshop and contact next to each other with equal space on the footer width wise */
+    margin: 25px 25px 0px;
+    color: wheat;
+}
+.quick-shop h3{
+    color: wheat;
+}
