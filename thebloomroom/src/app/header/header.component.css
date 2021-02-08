@@ -25,3 +25,13 @@ ul{
     text-decoration: none;
     color: rgb(243, 228, 200);
 }
+.shop-options{
+    display: none;
+}
+.header ul li:hover .shop-options{
+    display: block;
+    position: absolute;
+}
+.header ul li:hover .shop-options ul{
+    display: block;
+}

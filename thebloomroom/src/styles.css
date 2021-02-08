@@ -3,3 +3,10 @@ body{
     margin: 0px;
     padding: 0px;
 }
+.guest-form-card h3{
+    text-transform: uppercase;
+    font-size: medium;
+}
+.guest-form-card label{
+    font-size: small;
+}

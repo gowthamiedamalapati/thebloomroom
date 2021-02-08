@@ -8,7 +8,7 @@
 }
 .quick-shop{
     float: left;
-    width: 50%; /* to set quickshop and contact next to each other with equal space on the footer width wise to add one third div(item put width as 25% for one div, 50% on the other and 25% on other */
+    width: 25%; /* to set quickshop and contact next to each other with equal space on the footer width wise to add one third div(item put width as 25% for one div, 50% on the other and 25% on other */
     margin: 25px 25px 0px;
     margin-left: 40px;
 }
@@ -23,12 +23,24 @@
     text-decoration: none;
     color: wheat;
 }
-.contact-us{
+.address{
     float: right;
-    width: 50%; /* to set quickshop and contact next to each other with equal space on the footer width wise */
+    width: 25%; /* to set quickshop and contact next to each other with equal space on the footer width wise */
     margin: 25px 25px 0px;
     color: wheat;
 }
 .quick-shop h3{
+    color: wheat;
+}
+.subscribtion{
+ width:25%;
+ float:right;
+ margin: 25px 25px 0px  ;
+ color: wheat;
+}
+.services{
+    width: 25%;
+    float: right;
+    margin: 25px 25px 0px;
     color: wheat;
 }

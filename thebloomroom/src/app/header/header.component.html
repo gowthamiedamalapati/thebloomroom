@@ -2,8 +2,17 @@
 <h2>The Bloom Room</h2>
 <ul>
     <li><a href="#">Home</a></li>
-    <li><a href="#">Login</a></li>
-    <li><a href="#">Shop</a></li>
+    <li><a [routerLink]="['/signin']">Login</a></li>
+    <li><a [routerLink]="['/shop']">Shop</a>
+    <div class="shop-options">
+        <ul>
+            <li><a href="#">Flowers</a></li>
+            <li><a href="#">Bouquet</a></li>
+            <li><a href="#">Cakes</a></li>
+            <li><a href="#">Combo</a></li>
+        </ul>
+    </div></li>
     <li><a href="#">Cart</a></li>
 </ul>
 </div>
+<!--Remember there is an option to add sub list to cakes, Combo-->

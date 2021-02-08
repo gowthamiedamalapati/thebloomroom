@@ -1,14 +1,25 @@
-<h3>SignIn</h3>
-<form class="Loginform">
-    <input type="text" placeholder="phonenumber"><br>
-    <input type="password" placeholder="password"><br>
-    <button>Login</button>
-</form>
-<form class="registrationform">
-    <input type="text" placeholder="user name"><br>
-    <input type="phonenumber" placeholder="phonenumber"><br>
-    <input type="email" placeholder="email"><br>
-    <input type="text" placeholder="password"><br>
-    <input type="password" placeholder="confirm password"><br>
-    <button>Register</button>
-</form>
+
+<div  class="row mt-5">
+  <div class="col-md-4 offset-md-4">
+    <div class="guest-form-card card">
+      <div class="card-header text-center">
+        <h3>Login</h3>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="signInForm">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" formControlName="emailAddr">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" formControlName="password">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" [disabled]="!signInForm.valid">Submit</button>
+          <a [routerLink]="['/register']">Register Here</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
