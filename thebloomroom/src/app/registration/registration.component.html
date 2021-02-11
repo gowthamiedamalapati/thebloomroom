@@ -26,7 +26,7 @@
               [ngClass]="{'is-invalid': registrationForm.get('userNameField').touched && registrationForm.get('userNameField').invalid }"
               placeholder="Username" 
               formControlName="userNameField">
-              <span class="invalid-feedback">Username can't br blank.</span>
+              <span class="invalid-feedback">Username can't be blank.</span>
             </div>
           <div class="form-group">
             <label for="email">Email address</label>
@@ -48,8 +48,10 @@
               type="text" 
               class="form-control" 
               id="phoneNumber"  
+              [ngClass]="{'is-invalid': registrationForm.get('phoneNumberField').touched && registrationForm.get('phoneNumberField').invalid }"
               placeholder="Phone number" 
               formControlName="phoneNumberField">
+              <span class="invalid-feedback">Phone number can't be blank.</span>
             </div>
           <div class="form-group">
             <label for="password">Password</label>
@@ -57,8 +59,12 @@
             type="password" 
             class="form-control" 
             id="password" 
+            [ngClass]="{'is-invalid': registrationForm.get('password').touched && registrationForm.get('password').invalid }"
             placeholder="Password" 
             formControlName="password">
+            <span class="invalid-feedback">
+             <span *ngIf="registrationForm.get('password').hasError('minLength(8)')"> </span>
+            </span>
           </div>
           <button 
           type="submit" 

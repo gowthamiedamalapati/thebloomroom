@@ -10,13 +10,21 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductListComponent implements OnInit {
 
   productList : Product[] = [];
-
+  checkedCategory=[
+    {category:"Flowers", ischecked:false},
+    {category:"Bouquet", ischecked:false},
+    {category:"Cakes", ischecked:false},
+    {category:"Combos", ischecked:false}
+  ]
   constructor(private productService : ProductService) { }
 
   ngOnInit(): void {
   this.productService.getProducts().subscribe((products)=>{
     this.productList=products
   });
+  }
+  applyFilter(){
+  
   }
 
 }
