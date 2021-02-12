@@ -1,24 +1,24 @@
- <h3>Product</h3>
+
  <div class="row">
      <div class="col-md-2">
-    <form>
+    <form (ngSubmit)="applyFilter()" >
         <div class="form-check">
-          <input id="Flowers" type="checkbox" name="{{checkedCategory[0].category}}" class="form-check-input" >
+          <input id="Flowers" type="checkbox" name="{{checkedCategory[0].category}}" class="form-check-input" (change)="onChange()" [(ngModel)]="checkedCategory[0].ischecked" >
           <label class="form-check-label" for="Flowers">{{checkedCategory[0].category}}</label>
         </div>
         <div class="form-check">
-            <input id="Bouquet" type="checkbox" name="{{checkedCategory[1].category}}" class="form-check-input" >
+            <input id="Bouquet" type="checkbox" name="{{checkedCategory[1].category}}" class="form-check-input" (change)="onChange()" [(ngModel)]="checkedCategory[1].ischecked" >
             <label class="form-check-label" for="Bouquet">{{checkedCategory[1].category}}</label>
           </div>
           <div class="form-check">
-            <input id="Cakes" type="checkbox" name="{{checkedCategory[2].category}}" class="form-check-input" >
+            <input id="Cakes" type="checkbox" name="{{checkedCategory[2].category}}" class="form-check-input" (change)="onChange()" [(ngModel)]="checkedCategory[2].ischecked">
             <label class="form-check-label" for="Cakes">{{checkedCategory[2].category}}</label>
           </div>
           <div class="form-check">
-            <input id="Combo" type="checkbox" name="{{checkedCategory[3].category}}" class="form-check-input" >
+            <input id="Combo" type="checkbox" name="{{checkedCategory[3].category}}" class="form-check-input" (change)="onChange()" [(ngModel)]="checkedCategory[3].ischecked">
             <label class="form-check-label" for="Combo">{{checkedCategory[3].category}}</label>
           </div>
-        <button type="submit" class="btn btn-primary" (click)="applyFilter()">Submit</button>
+        <button type="submit" class="btn btn-primary" >Submit</button>
       </form>
     </div>
     <div class="col-md-10">
