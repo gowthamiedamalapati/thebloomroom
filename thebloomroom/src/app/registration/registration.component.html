@@ -1,10 +1,8 @@
 <div class="row">
   <div class="col-md-4 offset-md-4">
     <div class="guest-form-card card">
-      <div class="card-header text-center">
-        <h3 class="pb-2">Register</h3>
-      </div>
       <div class="card-body">
+        <h3 class="text-center">Register</h3>
         <form [formGroup]="registrationForm">
           <div class="form-group">
               <label for="name">Name</label>
@@ -70,6 +68,7 @@
           type="submit" 
           class="btn btn-primary btn-block" 
           [disabled]="!registrationForm.valid">Submit</button>
+          <a [routerLink]="['/signin']">Back to Login</a>
         </form>
       </div>
     </div>

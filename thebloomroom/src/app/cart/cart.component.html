@@ -1,18 +1,27 @@
-<div class="row">
-    <div class="col-md-8">
-
-    </div>
-    <div class="col-md-4">
-     <div *ngIf="cartItems.length === 0" class="alert alert-info">Your cart is empty</div>
-    
-        <ul *ngIf="cartItems.length > 0" class="list-group">
-            <li class="list-group-item" *ngFor="let item of cartItems">
-                <app-cart-item [cartItem]=item></app-cart-item>
-            </li>
-            <li class="list-group-item active" >
-               <strong>Total: {{cartTotal | currency:'INR'}}</strong>
-            </li>
-        </ul> 
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-head pl-5 pt-4">
+                <h3>My Cart</h3>
+                </div>
+                <div class="card-body text-center">
+                    <div *ngIf="cartItems.length === 0" class="empty-cart"> 
+                       <h3> Your Cart is Empty!</h3>
+                       <p>Looks like you haven't made a choice yet</p>
+                    </div>
+               
+                   <ul *ngIf="cartItems.length > 0" class="list-group">
+                       <li class="list-group-item" *ngFor="let item of cartItems">
+                           <app-cart-item [cartItem]=item></app-cart-item>
+                       </li>
+                       <li class="list-group-item active" >
+                          <strong>Total: {{cartTotal | currency:'INR'}}</strong>
+                       </li>
+                   </ul>
+                </div>
+            </div> 
+        </div>
     </div>
 </div>
 

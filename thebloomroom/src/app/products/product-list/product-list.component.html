@@ -1,6 +1,7 @@
 
  <div class="row">
      <div class="col-md-2">
+       <h6>Quick Filters</h6>
     <form (ngSubmit)="applyFilter()" >
         <div class="form-check">
           <input id="Flowers" type="checkbox" name="{{checkedCategory[0].category}}" class="form-check-input" (change)="onChange()" [(ngModel)]="checkedCategory[0].ischecked" >
@@ -22,6 +23,11 @@
       </form>
     </div>
     <div class="col-md-10">
+      <div class="row">
+        <div class="col text-center">
+          <h6>Shop Flowers</h6>
+        </div>
+      </div>    
     <div class="col-md-3" *ngFor= "let product of productList">
         <app-product-item [productItem]="product"></app-product-item>
     </div>

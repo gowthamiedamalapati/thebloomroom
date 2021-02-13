@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    margin: 0px;
+    margin-top: 10px;
     padding: 0px;
 }
 .guest-form-card h3{
@@ -9,4 +9,9 @@ body{
 }
 .guest-form-card label{
     font-size: small;
+}
+#footer {
+    position:relative;
+    bottom:0;
+    
 }
