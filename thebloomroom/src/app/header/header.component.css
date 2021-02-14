@@ -1,20 +1,21 @@
 .header{
     box-sizing: border-box;
-    background-color: teal;
+    background-color: #cbece4;
     display: flex;
     justify-content: space-between;
-    height:75px;
+    height:60px;
    
 }
-h2{
-    margin:25px 50px 25px 75px;
-    color:rgb(243, 228, 200);
+h3{
+    margin:15px 50px 25px 75px;
+    color:#3a643e; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 ul{
     list-style: none;
     display: flex;
     width: 500px;
-    margin: 29px 70px 29px 60px;
+    margin: 19px 70px 35px 60px;
     justify-content: space-around;
     font-weight: bolder;
     text-align: center;  
@@ -24,7 +25,7 @@ ul{
 }
 .header ul li a{
     text-decoration: none;
-    color: rgb(243, 228, 200);
+    color:#3a643e;
 }
 .shop-options{
     display: none;
@@ -35,4 +36,8 @@ ul{
 }
 .header ul li:hover .shop-options ul{
     display: block;
+}
+button{
+    border: 0px;
+    height: 10px;
 }

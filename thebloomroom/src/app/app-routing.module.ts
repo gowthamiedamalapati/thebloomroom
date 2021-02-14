@@ -8,7 +8,7 @@ import { CartComponent } from './cart/cart.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 
 const routes: Routes = [
-  { path:'', redirectTo:'/shop', pathMatch: 'full'},
+  { path:'', redirectTo:'/Land', pathMatch: 'full'},
   { path: 'Land', component: LandingpageComponent},
   { path: 'signin', component: SignInComponent },
   { path: 'register', component: RegistrationComponent },

@@ -1,2 +1,25 @@
-<p>Buying flowers online is now neasy</p>
-<button><h3>SignIn/Login</h3></button>
+
+    <div class="row">
+        <div class="col-sm-4 leftcontainer">
+            <div class="logo-container text-center">
+                <h3><i>The Bloom Room</i></h3>
+            </div> 
+        </div>
+        <div class="col-sm-8">   
+            <div class="head-container">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a [routerLink]="['/shop']">Shop</a></li>
+                    <li><a [routerLink]="['/cart']">Cart</a></li>
+                </ul>
+               <button class="shadow mb-1 bg-white rounded" [routerLink]="['/signin']">SignIn/LogIn</button>
+            </div>     
+            <div class="image-container">
+                <img src="assets/images/exoticvase.jpg" style="width:930px; height:600px">
+            </div>
+        </div>
+      <h2>Fresh Flowers<br>Everyday</h2>
+      <p><i>We Promise a delivery in 4 hours across city.</i></p>
+      <button class="shadow p-1 mb-3 bg-white rounded" [routerLink]="['/shop']">Shop Now</button>
+    </div>
+
