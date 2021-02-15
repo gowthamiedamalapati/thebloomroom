@@ -1,11 +1,26 @@
+.container{
+    max-height:auto;
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+}
 .list-group{
     float:right;
+    background-color:  #cbece4;
 }
 .empty-cart{
-   background-image: url(https://i.pinimg.com/originals/81/c4/fc/81c4fc9a4c06cf57abf23606689f7426.jpg);
-
+   background-color:#cbece4 ;
+}
+.row{
+    margin: 11% 30px;
 }
 .card{
     border: 0px;
     margin-top: 40px;
+    height: auto;
+    background-color: #cbece4;
+}
+.container app-footer{
+    bottom: 0px;
+    margin-top: 10px;
 }

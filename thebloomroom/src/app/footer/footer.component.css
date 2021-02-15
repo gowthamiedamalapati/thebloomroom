@@ -1,46 +1,14 @@
 .footer{
-    background-color: teal;
-    display: flex;
-    position: absolute;
+    background-color:#cbece4;
     width: 100%;
-    bottom:0px;
-
+    height: 60px;
+    text-align: center;
+    bottom: 0px;
+    position: relative;
 }
-.quick-shop{
-    float: left;
-    width: 25%; /* to set quickshop and contact next to each other with equal space on the footer width wise to add one third div(item put width as 25% for one div, 50% on the other and 25% on other */
-    margin: 25px 25px 0px;
-    margin-left: 40px;
-}
-.quick-shop ul{
-    list-style: none;
-    padding: 10px;
-}
-.quick-shop ul li {
-    text-decoration: none;
-}
-.quick-shop ul li a{
-    text-decoration: none;
-    color: wheat;
-}
-.address{
-    float: right;
-    width: 25%; /* to set quickshop and contact next to each other with equal space on the footer width wise */
-    margin: 25px 25px 0px;
-    color: wheat;
-}
-.quick-shop h3{
-    color: wheat;
-}
-.subscribtion{
- width:25%;
- float:right;
- margin: 25px 25px 0px  ;
- color: wheat;
-}
-.services{
-    width: 25%;
-    float: right;
-    margin: 25px 25px 0px;
-    color: wheat;
+ .footer p {
+     position: absolute;
+     text-align: center;
+     top: 15px;
+     left: 40%;
 }
