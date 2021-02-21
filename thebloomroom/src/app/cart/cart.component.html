@@ -1,30 +1,39 @@
 <app-header></app-header>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="card shadow ml-20">
-                <div class="card-head pl-5 pt-4">
-                <h3>My Cart</h3>
-                </div>
-                <div class="card-body text-center">
-                    <div *ngIf="cartItems.length === 0" class="empty-cart"> 
-                       <h3> Your Cart is Empty!</h3>
-                       <p>Looks like you haven't made a choice yet</p>
-                    </div>
-               
-                   <ul *ngIf="cartItems.length > 0" class="list-group">
-                       <li class="list-group-item" *ngFor="let item of cartItems">
-                           <app-cart-item [cartItem]=item></app-cart-item>
-                       </li>
-                       <li class="list-group-item active" >
-                          <strong>Total: {{cartTotal | currency:'INR'}}</strong>
-                       </li>
-                   </ul>
-                </div>
-            </div> 
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLongTitle">My Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col">   
+                    <div *ngIf="cartItems.length === 0" class="empty-cart"> 
+                        <h3> Your Cart is Empty!</h3>
+                        <p>Looks like you haven't made a choice yet</p>
+                    </div>
+                           
+                    <ul *ngIf="cartItems.length > 0" class="list-group">
+                        <li class="list-group-item" *ngFor="let item of cartItems">
+                        <app-cart-item [cartItem]=item></app-cart-item>
+                        </li>
+                        <li class="list-group-item active" >
+                        <strong>Total: {{cartTotal | currency:'INR'}}</strong>
+                        </li>
+                    </ul>   
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Checkout</button>
+        </div>
+      </div>
     </div>
-    <!-- <app-footer></app-footer> -->
-</div>
+  </div>
+
 
 

@@ -1,12 +1,13 @@
-
+<div class="container">
 <app-header></app-header>
 <div  class="row mt-5">
   <div class="col-md-4 offset-md-4">
-    <div class="guest-form-card card">
+    <div class="guest-form-card card shadow">
       
       <div class="card-body">
+        <span *ngIf="errorMsg">{{errorMsg}}</span>
         <h3 class="text-center">Login Here</h3>
-        <form [formGroup]="signInForm">
+        <form [formGroup]="signInForm" (ngSubmit)="signInUser()">
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" 
@@ -31,6 +32,6 @@
     </div>
   </div>
 </div>
-
 <app-footer></app-footer>
+</div>
 

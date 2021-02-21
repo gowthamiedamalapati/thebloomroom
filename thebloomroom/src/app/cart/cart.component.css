@@ -1,8 +1,11 @@
-.container{
-    max-height:auto;
+.row{
     margin: 0px;
-    padding: 0px;
-    max-width: 100%;
+}
+.modal-header{
+    background-color:#cbece4;
+}
+#cartModalLongTitle{
+    color: #3a643e;
 }
 .list-group{
     float:right;
@@ -11,16 +14,9 @@
 .empty-cart{
    background-color:#cbece4 ;
 }
-.row{
-    margin: 11% 30px;
-}
 .card{
     border: 0px;
     margin-top: 40px;
     height: auto;
     background-color: #cbece4;
-}
-.container app-footer{
-    bottom: 0px;
-    margin-top: 10px;
 }

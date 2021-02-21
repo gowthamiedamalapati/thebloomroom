@@ -1,16 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
-
+import { RegistrationService } from 'src/app/services/registration.service';
+import { Router } from '@angular/router';
+import { productsUrl } from '../config/api';
+import { MessengerService } from 'src/app/services/messenger.service'
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-
   registrationForm : FormGroup;
+  userExists : string;
 
-  constructor(private formBuilder:FormBuilder ) { 
+  constructor(
+    private formBuilder:FormBuilder,
+    private registrationservice:RegistrationService,
+    private router:Router,
+    private msg:MessengerService
+    ) { 
   /*  this.registrationForm = formBuilder.group({
       emailAddr: new FormControl(),
       password : new FormControl(),
@@ -31,6 +39,18 @@ export class RegistrationComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
   }
-
+  register(){
+    this.userExists='';
+    this.registrationservice.verifySignIn(this.registrationForm.value.email).subscribe((registration)=>{
+    if(registration.length==0){
+      this.registrationservice.registerUser(this.registrationForm.value).subscribe(()=>{
+        this.router.navigateByUrl('/shop');
+      })
+    }else{
+      this.userExists="User Alredy exist";
+    }
+    })   
+  }
 }

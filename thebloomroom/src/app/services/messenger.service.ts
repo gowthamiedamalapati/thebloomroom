@@ -14,10 +14,10 @@ export class MessengerService {
   getMsg(){
   return this.subject.asObservable()
   }
-  sendFilteredMsg(category){
-    this.subject.next(category)
+  sendSignInMsg(signin){
+    this.subject.next(signin)
   }
-  getFilteredMsg(){
+  getSignInMsg(){
     return this.subject.asObservable()
   }
 }

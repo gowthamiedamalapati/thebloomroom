@@ -42,7 +42,7 @@ export class ProductListComponent implements OnInit {
    }
   }
  }
- console.log(this.filteredProducts)
+
  this.productList=this.filteredProducts
 }
 

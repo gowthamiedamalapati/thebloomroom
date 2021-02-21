@@ -1,3 +1,10 @@
+.container{
+    max-height:auto;
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+    overflow: hidden;
+}
 input.ng-touched.ng-invalid {
     border:1px solid red;
 }

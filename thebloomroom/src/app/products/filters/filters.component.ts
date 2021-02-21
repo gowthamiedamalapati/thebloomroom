@@ -13,7 +13,5 @@ export class FiltersComponent implements OnInit {
 
   ngOnInit(): void {
   }
- handelFilters(){
-   this.msg.sendFilteredMsg(this.category)
- }
+ 
 }

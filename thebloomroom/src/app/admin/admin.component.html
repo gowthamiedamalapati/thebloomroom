@@ -1,0 +1,40 @@
+<app-header></app-header>
+<button (click)="onclick()"><h4>Add Products</h4></button>
+
+
+<table *ngIf="visible" >
+    <tr>
+        <th>Product id</th>
+        <th>Product name</th>
+        <th>Product description</th>
+        <th>Product price</th>
+        <th>Product image</th>
+        <th>Product catogery</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <td><input type="text" [(ngModel)]="product.id"></td>
+        <td><input type="text" [(ngModel)]="product.name"></td>
+        <td><input type="text"[(ngModel)]="product.description"></td> 
+        <td><input type="text" [(ngModel)]="product.price"></td>
+        <td><input type="text" [(ngModel)]="product.image"></td>
+        <td><input type="text" [(ngModel)]="product.category"></td>
+        <td><button type="submit" (click)=addProduct()>Add</button></td>       
+    </tr>
+</table>
+
+<button (click)="showproducts()"><h4>Show Products</h4></button>
+<table *ngIf="productList.length>0">
+    <tr>
+        <th *ngFor="let column of headers">
+          {{column}}
+        </th>
+    </tr>
+    <tr *ngFor="let product of productList">
+        <td *ngFor="let column of index">
+          {{product[column]}}
+        </td>
+        <td><button>Delete</button>
+        <button>Edit</button></td>
+    </tr>
+</table>

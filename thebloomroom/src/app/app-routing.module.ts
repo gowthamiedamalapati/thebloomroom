@@ -6,6 +6,7 @@ import { ProductsComponent } from './products/products.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CartComponent } from './cart/cart.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   { path:'', redirectTo:'/Land', pathMatch: 'full'},
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'shop', component: ProductsComponent},
   { path: 'cart', component: CartComponent},
+  { path: 'admin', component: AdminComponent},
   { path: '**', component: PageNotFoundComponent }
 
 ];

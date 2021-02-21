@@ -20,7 +20,7 @@ export class ProductItemComponent implements OnInit {
  handelAddToCart(){
    this.cartService.addProductToCart(this.productItem).subscribe(()=> {
   this.msg.sendMsg(this.productItem)
-
+  
    })
  }
 }
