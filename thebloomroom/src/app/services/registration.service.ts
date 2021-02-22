@@ -16,6 +16,8 @@ export class RegistrationService {
     private msg:MessengerService) { }
 
   registerUser(registration : Registrations):Observable<any>{
+    registration.cart=[];
+    console.log(registration);
     return this.http.post(registrationsUrl, registration) 
   }
   verifySignIn(email:string):Observable<Registrations[]> {

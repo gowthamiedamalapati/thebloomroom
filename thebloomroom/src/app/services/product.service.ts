@@ -18,4 +18,14 @@ export class ProductService {
   postProducts(product:Product):Observable<any>{
     return this.http.post(productsUrl, product);
  }
+ deleteProduct(id):Observable<any>{
+   return this.http.delete(productsUrl +'/'+id);
+ }
+ updateProduct(id, updatedData):Observable<any>{
+  return this.http.put(productsUrl +'/'+id, updatedData)
+ }
+getProductToUpdate(id){
+  return this.http.get(productsUrl +'/'+id);
+}
+ 
 }

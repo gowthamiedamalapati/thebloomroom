@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -34,16 +35,21 @@ export class ProductListComponent implements OnInit {
   }
   applyFilter(){
     this.filteredCategory=this.checkedCategory.filter(x=>x.ischecked==true).map(x=>x.category)
+    console.log(this.filteredCategory)
       for(let i=0; i<this.filteredCategory.length; i++){
       for(let j=0; j<this.productList.length; j++){
     if(this.filteredCategory[i]==this.productList[j].category){
-     this.filteredProducts.push(this.productList[j])
-     
+     this.filteredProducts.push(this.productList[j])  
    }
   }
  }
-
  this.productList=this.filteredProducts
+}
+clearAll(form: NgForm){
+  form.reset();
+   this.productService.getProducts().subscribe((products)=>{
+   this.productList=products;
+})
 }
 
 }

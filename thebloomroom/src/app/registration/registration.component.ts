@@ -2,7 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { RegistrationService } from 'src/app/services/registration.service';
 import { Router } from '@angular/router';
-import { productsUrl } from '../config/api';
 import { MessengerService } from 'src/app/services/messenger.service'
 @Component({
   selector: 'app-registration',
