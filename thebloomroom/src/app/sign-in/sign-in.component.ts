@@ -41,6 +41,8 @@ export class SignInComponent implements OnInit {
     this.registrationService.verifySignIn(this.signInForm.value.emailAddr).subscribe((registration)=>{
       if(this.signInForm.value.password==registration[0].password){
         this.router.navigate(['/shop']);
+        localStorage.setItem("email",this.signInForm.value.emailAddr);
+        console.log(localStorage);
       }else{
          this.errorMsg="incorrect password";
       }

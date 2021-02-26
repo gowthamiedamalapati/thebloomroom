@@ -4,3 +4,6 @@ product-btn{
 btn-clr{
     background-color: teal;
 }
+.card-img-top{ 
+height: 320px; 
+} 

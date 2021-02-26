@@ -28,10 +28,14 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  this.productService.getProducts().subscribe((products)=>{
-    this.productList=products
-    this.originalList=products
-  });
+  this.loadProducts();
+  }
+
+  loadProducts(){
+    this.productService.getProducts().subscribe((products)=>{
+      this.productList=products
+      this.originalList=products
+    });
   }
   applyFilter(){
     this.filteredCategory=this.checkedCategory.filter(x=>x.ischecked==true).map(x=>x.category)
@@ -47,9 +51,8 @@ export class ProductListComponent implements OnInit {
 }
 clearAll(form: NgForm){
   form.reset();
-   this.productService.getProducts().subscribe((products)=>{
-   this.productList=products;
-})
+   this.loadProducts();
+
 }
 
 }

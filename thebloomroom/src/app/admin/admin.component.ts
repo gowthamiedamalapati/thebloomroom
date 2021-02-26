@@ -12,8 +12,8 @@ import { Product } from '../models/product';
 export class AdminComponent implements OnInit {
   productList:Product[]=[];
   headers = ['Product Id','Product Name','Product Description','Product Price','Product Image','Product Category','Action'];
-  index = ['id','name','description','price','image','category'];
-  updatedData:any;
+  productAttr = ['id','name','description','price','image','category'];
+  updatedData:Product;
   visible:boolean=false;
   product={
     id:0,
@@ -52,9 +52,21 @@ export class AdminComponent implements OnInit {
     }
   });
   }
-  edit(id){
-  this.productservice.getProductToUpdate(id).subscribe((result)=>{
-    console.log(result);
+  edit(i){
+    this.product=this.productList[i];
+
+   }
+   updateProduct(){
+  this.productservice.updateProduct(this.product.id, this.product).subscribe((result)=>{
+  this.showProducts();
+  this.product={  //How to empty object dynamically
+    id:0,
+    name:"",
+    description:"",
+    price:0,
+    image:"",
+    category:"",
+  }
   });
    }
   delete(id){

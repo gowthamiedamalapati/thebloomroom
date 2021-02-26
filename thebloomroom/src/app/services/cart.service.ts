@@ -35,6 +35,6 @@ export class CartService {
       );
   }
   addProductToCart(product: Product): Observable<any>{
-    return this.http.post(cartUrl,  product );
+    return this.http.post(cartUrl,  {product} );
   }
 }
